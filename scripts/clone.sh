@@ -3,15 +3,13 @@
 set -e
 set -x
 
-git clone --filter=tree:0 https://github.com/mumble-voip/mumble/ /mumble/repo
+git clone https://Mahmud_Sarwar:ATBBQ8LCD8GVrfqwJYgfX95VFMpC12E1CD3A@bitbucket.org/nybsys/mumble-source-code.git /mumble/repo
 
 cd /mumble/repo
 
 git config advice.detachedHead false
 
-if [[ -n "$MUMBLE_VERSION" && ! "$MUMBLE_VERSION" == "latest" ]]; then
-	git checkout "$MUMBLE_VERSION"
-fi
+git checkout neloy/dev
 
 git submodule update --init
 git submodule update --depth 1
